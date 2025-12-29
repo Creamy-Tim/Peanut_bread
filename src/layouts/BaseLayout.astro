@@ -14,7 +14,9 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
 <body>
     <header>
         <div class="header_inner">
-            <img src="/assets/img/icon/home.svg" class="header_home" alt="홈" />
+            <a href="/" aria-label="메인 페이지로 이동" aria-current={active === "main" ? "page" : undefined}>
+                <img src="/assets/img/icon/home.svg"class="header_home" alt="홈" />
+            </a>
 
             <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
 

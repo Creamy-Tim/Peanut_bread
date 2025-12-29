@@ -1,100 +1,32 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import members from "../data/writers.json";
 ---
 
 <BaseLayout active="team">
     <h1 class="page_title">팀원 소개</h1>
 
-    <div class="team_grid">
-        <button class="member"
-        data-img="/assets/img/writer/tmdgk.jpeg"
-        data-name="승하"
-        data-role="대표"
-        data-introduce="땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece="Hops Is In The Air"
-        data-showpiece-link="https://smartstore.naver.com/ddangcong0/products/10652642255"
-        data-instagram="tmdgk.zip"
-        data-instagram-link="https://www.instagram.com/tmdgk.zip/"
-        data-email="tmdgk050830@naver.com">
-            <img class="member_img" src="/assets/img/writer/tmdgk.jpeg" alt="승하" />
-            <p class="member_role">대표</p>
-            <p class="member_name">승하</p>
-        </button>
-
-        <button class="member"
-        data-img="/assets/img/writer/aeri.jpeg"
-        data-name="애리"
-        data-role="편집부장"
-        data-introduce="땅콩빵 편집부장 애리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece="비건 with 매점"
-        data-showpiece-link=""
-        data-instagram="writeraeri_v"
-        data-instagram-link="https://www.instagram.com/writeraeri_v/"
-        data-email="">
-            <img class="member_img" src="/assets/img/writer/aeri.jpeg" alt="애리" />
-            <p class="member_role">편집부장</p>
-            <p class="member_name">애리</p>
-        </button>
-
-        <button class="member"
-        data-img="/assets/img/writer/judy.jpeg"
-        data-name="지홍"
-        data-role="유통팀장"
-        data-introduce="땅콩빵 유통팀장 지홍입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece="심해 속에서 따뜻한 햇살을 바라보며"
-        data-showpiece-link=""
-        data-instagram=""
-        data-instagram-link=""
-        data-email="">
-            <img class="member_img" src="/assets/img/writer/judy.jpeg" alt="지홍" />
-            <p class="member_role">유통팀장</p>
-            <p class="member_name">지홍</p>
-        </button>
-
-        <button class="member"
-        data-img="/assets/img/writer/marie.jpeg"
-        data-name="마리"
-        data-role="디자인부장"
-        data-introduce="땅콩빵 디자인부장 마리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece="심해 속에서 빠져버렸다."
-        data-showpiece-link="https://smartstore.naver.com/ddangcong0/products/10242476880"
-        data-instagram="mariebunny._"
-        data-instagram-link="https://www.instagram.com/mariebunny._/"
-        data-email="">
-            <img class="member_img" src="/assets/img/writer/marie.jpeg" alt="마리" />
-            <p class="member_role">디자인부장</p>
-            <p class="member_name">마리</p>
-        </button>
-
-        <button class="member"
-        data-img="/assets/img/writer/bora.jpeg"
-        data-name="보라"
-        data-role="홍보팀장"
-        data-introduce="땅콩빵 홍보팀장 보라입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece=""
-        data-showpiece-link=""
-        data-instagram=""
-        data-instagram-link=""
-        data-email="">
-            <img class="member_img" src="/assets/img/writer/bora.jpeg" alt="보라" />
-            <p class="member_role">홍보팀장</p>
-            <p class="member_name">보라</p>
-        </button>
-        <button class="member"
-        data-img="/assets/img/writer/ado.jpeg"
-        data-name="아도"
-        data-role="홍보팀장"
-        data-introduce="땅콩빵 홍보팀장 아도입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다."
-        data-showpiece="언젠가 나의 이야기가 될 수 있으니 조금 이기적이게 들어줄게요"
-        data-showpiece-link="https://smartstore.naver.com/ddangcong0/products/10242455168"
-        data-instagram="msg000i94"
-        data-instagram-link="https://www.instagram.com/msg000i94/"
-        data-email="">
-            <img class="member_img" src="/assets/img/writer/ado.jpeg" alt="아도" />
-            <p class="member_role">홍보팀장</p>
-            <p class="member_name">아도</p>
-        </button>
-    </div>
+    <section class="team_grid" aria-label="팀원 목록">
+    {members.map((m) => (
+      <button
+        class="member"
+        type="button"
+        data-img={m.img}
+        data-name={m.name}
+        data-role={m.role}
+        data-introduce={m.introduce}
+        data-showpiece={m.showpiece}
+        data-showpiece-link={m.showpieceLink}
+        data-instagram={m.instagram}
+        data-instagram-link={m.instagramLink}
+        data-email={m.email}
+      >
+        <img class="member_img" src={m.img} alt={m.name} loading="lazy" />
+        <p class="member_role">{m.role}</p>
+        <p class="member_name">{m.name}</p>
+      </button>
+    ))}
+  </section>
 
     <!-- 작가 상세 소개 패널  -->
     <div class="modal" id="memberModal" aria-hidden="true">
@@ -125,7 +57,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
     <div class="apply_wrap">
-        <a href="/apply" class="apply_btn">지원하기</a>
+        <a href="/apply" class="team_apply">지원하기</a>
     </div>
 
 

@@ -190,32 +190,28 @@ header {
 .team_grid {
     display: grid;
     gap: 24px;
+    margin: 0 auto;
 
     /* 카드 최소 200~240px 정도 확보, 남는 공간은 자동 분배 */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     align-items: start;
+    max-width: 1200px;
+    justify-content: center;
 }
 
 .member {
+    all: unset;  /* 버튼 기본 스타일 제거 */
     display: grid;
     gap: 10px;
-    justify-items: center;
-    /* 버튼 스타일 제거 */
-    background-color: transparent;
-    appearance: none;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    color: inherit;
     cursor: pointer;
-    outline: none;
+    justify-self: center;
+    text-align: center;
 }
 
 .member_img {
     width: 100%;
     max-width: 240px;
+    aspect-ratio: 3 / 4;
     object-fit: cover; /* 꽉 채우되 비율 유지 */
     border: 2px solid #af814d;
     border-radius: 6px;
@@ -237,12 +233,12 @@ header {
     font-size: 20px;
 }
 
-.team_apply {
-    display: inline-block;
-    margin-top: 36px;
-    font-weight: 900;
-    color: #6b4f2d;
-    text-decoration: underline;
+/* 반응형 */
+@media (max-width: 1024px){
+  .member_grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px){
+  .member_grid{ grid-template-columns: 1fr; }
 }
 
 /* 작가 소개 패널 */
@@ -339,16 +335,33 @@ header {
 }
 
 .modal_info p {
-  margin: 4px 0;
-  line-height: 1.6;
-  word-break: break-word;  /* 긴 이메일/아이디 줄바꿈 */
+    margin: 4px 0;
+    line-height: 1.6;
+    word-break: break-word;  /* 긴 이메일/아이디 줄바꿈 */
 }
 
 /* 모바일 */
 @media (max-width: 768px) {
-  .modal_body {
-    grid-template-columns: 1fr;
-  }
+    .modal_body {
+        grid-template-columns: 1fr;
+    }
 
-  .modal_name { font-size: 34px; }
+    .modal_name { font-size: 34px; }
+}
+
+.apply_wrap {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team_apply {
+    color: #6b4f2d;
+    font-size: 32px;
+    font-family: 'MemomentKkukkukk';
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    margin: 36px auto 64px;
+    text-decoration: underline;
 }
