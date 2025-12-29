@@ -1,74 +1,74 @@
 [
-  {
-    "id": "정승하",
-    "img": "/assets/img/writer/tmdgk.jpeg",
-    "name": "승하",
-    "role": "대표",
-    "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
-    "showpiece": "Hops Is In The Air",
-    "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10652642255",
-    "instagram": "tmdgk.zip",
-    "instagramLink": "https://www.instagram.com/tmdgk.zip/",
-    "email": "tmdgk050830@naver.com"
-  },
-  {
-    "id": "애리",
-    "img": "/assets/img/writer/aeri.jpeg",
-    "name": "애리",
-    "role": "편집부장",
-    "introduce": "땅콩빵 편집부장 애리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
-    "showpiece": "비건 with 매점",
-    "showpieceLink": "",
-    "instagram": "writeraeri_v",
-    "instagramLink": "https://www.instagram.com/writeraeri_v/",
-    "email": ""
-  },
-  {
-    "id": "지홍",
-    "img": "/assets/img/writer/judy.jpeg",
-    "name": "지홍",
-    "role": "유통팀장",
-    "introduce": "땅콩빵 유통팀장 지홍입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
-    "showpiece": "심해 속에서 따뜻한 햇살을 바라보며",
-    "showpieceLink": "",
-    "instagram": "",
-    "instagramLink": "",
-    "email": ""
-  },
-  {
-    "id": "마리",
-    "img": "/assets/img/writer/marie.jpeg",
-    "name": "마리",
-    "role": "디자인부장",
-    "introduce": "땅콩빵 디자인부장 마리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
-    "showpiece": "심해 속에서 빠져버렸다.",
-    "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10242476880",
-    "instagram": "mariebunny._",
-    "instagramLink": "https://www.instagram.com/mariebunny._/",
-    "email": ""
-  },
-  {
-    "id": "보라",
-    "img": "/assets/img/writer/judy.jpeg",
-    "name": "보라",
-    "role": "홍보팀장",
-    "introduce": "땅콩빵 홍보팀장 보라입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
-    "showpiece": "",
-    "showpieceLink": "",
-    "instagram": "",
-    "instagramLink": "",
-    "email": ""
-  },
-  {
-    "id": "아도",
-    "img": "/assets/img/writer/ado.jpeg",
-    "name": "아도",
-    "role": "홍보팀장",
-    "introduce": "땅콩빵 홍보팀장 아도입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
-    "showpiece": "언젠가 나의 이야기가 될 수 있으니 조금 이기적이게 들어줄게요",
-    "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10242455168",
-    "instagram": "msg000i94",
-    "instagramLink": "https://www.instagram.com/msg000i94/",
-    "email": ""
-  }  
+    {
+        "id": "정승하",
+        "img": "/assets/img/writer/tmdgk.jpeg",
+        "name": "승하",
+        "role": "대표",
+        "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
+        "showpiece": "Hops Is In The Air",
+        "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10652642255",
+        "instagram": "tmdgk.zip",
+        "instagramLink": "https://www.instagram.com/tmdgk.zip/",
+        "email": "tmdgk050830@naver.com"
+    },
+    {
+        "id": "애리",
+        "img": "/assets/img/writer/aeri.jpeg",
+        "name": "애리",
+        "role": "편집부장",
+        "introduce": "땅콩빵 편집부장 애리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
+        "showpiece": "비건 with 매점",
+        "showpieceLink": "",
+        "instagram": "writeraeri_v",
+        "instagramLink": "https://www.instagram.com/writeraeri_v/",
+        "email": ""
+    },
+    {
+        "id": "지홍",
+        "img": "/assets/img/writer/judy.jpeg",
+        "name": "지홍",
+        "role": "유통팀장",
+        "introduce": "땅콩빵 유통팀장 지홍입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
+        "showpiece": "심해 속에서 따뜻한 햇살을 바라보며",
+        "showpieceLink": "",
+        "instagram": "",
+        "instagramLink": "",
+        "email": ""
+    },
+    {
+        "id": "마리",
+        "img": "/assets/img/writer/marie.jpeg",
+        "name": "마리",
+        "role": "디자인부장",
+        "introduce": "땅콩빵 디자인부장 마리입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
+        "showpiece": "심해 속에서 빠져버렸다.",
+        "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10242476880",
+        "instagram": "mariebunny._",
+        "instagramLink": "https://www.instagram.com/mariebunny._/",
+        "email": ""
+    },
+    {
+        "id": "보라",
+        "img": "/assets/img/writer/judy.jpeg",
+        "name": "보라",
+        "role": "홍보팀장",
+        "introduce": "땅콩빵 홍보팀장 보라입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
+        "showpiece": "",
+        "showpieceLink": "",
+        "instagram": "",
+        "instagramLink": "",
+        "email": ""
+    },
+    {
+        "id": "아도",
+        "img": "/assets/img/writer/ado.jpeg",
+        "name": "아도",
+        "role": "홍보팀장",
+        "introduce": "땅콩빵 홍보팀장 아도입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
+        "showpiece": "언젠가 나의 이야기가 될 수 있으니 조금 이기적이게 들어줄게요",
+        "showpieceLink": "https://smartstore.naver.com/ddangcong0/products/10242455168",
+        "instagram": "msg000i94",
+        "instagramLink": "https://www.instagram.com/msg000i94/",
+        "email": ""
+    }  
 ]

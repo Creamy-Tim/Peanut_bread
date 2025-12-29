@@ -247,6 +247,8 @@ header {
     inset: 0;
     display: none;
     z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .modal.open { display: block; }
@@ -365,3 +367,6 @@ header {
     margin: 36px auto 64px;
     text-decoration: underline;
 }
+/* ---------- 팀 소개 페이지 ---------- */
+
+
