@@ -22,7 +22,12 @@ fetch("/api/youtube.json")
                 a.className = "video";
 
                 a.innerHTML = `
-                  <img src="${video.thumbnail}" alt="${video.title}">
+                <img
+                src="${video.thumbnail}"
+                alt="${video.title}"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://i.ytimg.com/vi/${video.id}/hqdefault.jpg';"
+                />
                 `;
 
                 track.appendChild(a);
