@@ -77,11 +77,10 @@ export const GET: APIRoute = async () => {
       const cd = it.contentDetails ?? {};
       const videoId = sn?.resourceId?.videoId ?? "";
 
-      const thumb =
-        sn.thumbnails?.high?.url ||
-        sn.thumbnails?.medium?.url ||
-        sn.thumbnails?.default?.url ||
-        "";
+      // ✅ 레터박스 적은 썸네일을 직접 생성
+      const thumb = videoId
+      ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
+      : "";
 
       allItems.push({
         id: videoId,
