@@ -1,5 +1,8 @@
 import type { APIRoute } from "astro";
 
+// https://vercel.com/creamy-tims-projects/ddang_cong0
+// 이 링크에서 API 키값 관리
+// (링크는 배포 관련 사이트)
 const API_KEY = import.meta.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = import.meta.env.YOUTUBE_CHANNEL_ID;
 

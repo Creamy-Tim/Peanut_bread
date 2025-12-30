@@ -2,6 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout active="main">
-    <h1 class="page_title">메인</h1>
+<BaseLayout active="sns">
+    <section>
+        <h1>youtube.com/ddang_cong0</h1>
+
+        <section class="video_section">
+        <div class="video_section_track" id="ytTrack">
+            <!-- JS가 여기 채움 -->
+        </div>
+        </section>
+
+        <script type="module" src="/sns.js"></script>
+    </section>
 </BaseLayout>
