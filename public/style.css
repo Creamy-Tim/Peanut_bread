@@ -397,17 +397,19 @@ header {
 
     /* 중요: track이 부모보다 커질 수 있어야 스크롤이 생김 */
     width: max-content;        /* 또는 inline-flex도 가능 */
-    padding: 0;
+    padding: 8px 2px;
 }
 
 .video {
     height: 100%;
     display: block;
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* 줄어들지 않게 */
 }
 
 .video img {
     height: 100%;
+    width: auto;        /* 가로는 비율 유지 */
     display: block;
-    object-fit: cover;
+    object-fit: cover;  /* 필요하면 cover */
+    border-radius: 8px; /* 선택 */
 }
