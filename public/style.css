@@ -383,25 +383,23 @@ header {
 
 /* ---------- SNS 페이지 ---------- */
 .video_section{
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .video_section_track{
-  display: flex;
-  gap: 12px;
+    display: flex;
+    gap: 12px;
 
-  /* 중요: track이 부모보다 커질 수 있어야 스크롤이 생김 */
-  width: max-content;        /* 또는 inline-flex도 가능 */
-  padding: 8px 2px;
+    /* 중요: track이 부모보다 커질 수 있어야 스크롤이 생김 */
+    width: max-content;        /* 또는 inline-flex도 가능 */
+    padding: 8px 2px;
 }
 
-.card{
-  flex: 0 0 auto;            /* 줄바꿈 방지 */
-  width: clamp(180px, 60vw, 320px); /* 반응형 카드 너비 예시 */
-  height: 160px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+.video{
+    width: auto;
+    height: 100%;
 }
