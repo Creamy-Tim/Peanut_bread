@@ -4,63 +4,60 @@ import type { APIRoute } from "astro";
 // 이 링크에서 API 키값 관리
 // (링크는 배포 관련 사이트)
 const API_KEY = import.meta.env.YOUTUBE_API_KEY;
-const CHANNEL_ID = import.meta.env.YOUTUBE_CHANNEL_ID;
-
+const CHANNEL_IDS_RAW = import.meta.env.YOUTUBE_CHANNEL_IDS;
 const MAX_RESULTS = 4;
 const CACHE_SECONDS = 60 * 10;
 
 export const GET: APIRoute = async () => {
   if (!API_KEY) {
-    return new Response(JSON.stringify({ error: "Missing YOUTUBE_API_KEY" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    return new Response(JSON.stringify({ error: "Missing YOUTUBE_API_KEY" }), { status: 500 });
   }
-  if (!CHANNEL_ID) {
-    return new Response(JSON.stringify({ error: "Missing YOUTUBE_CHANNEL_ID" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+  if (!CHANNEL_IDS_RAW) {
+    return new Response(JSON.stringify({ error: "Missing YOUTUBE_CHANNEL_IDS" }), { status: 500 });
   }
 
-  const url =
-    "https://www.googleapis.com/youtube/v3/search" +
-    `?part=snippet&channelId=${encodeURIComponent(CHANNEL_ID)}` +
-    `&maxResults=${MAX_RESULTS}` +
-    `&order=date&type=video` +
-    `&key=${encodeURIComponent(API_KEY)}`;
+  const channelIds = CHANNEL_IDS_RAW.split(",").map((s) => s.trim()).filter(Boolean);
 
-  const res = await fetch(url);
+  const fetchOne = async (channelId: string) => {
+    const url =
+      "https://www.googleapis.com/youtube/v3/search" +
+      `?part=snippet&channelId=${encodeURIComponent(channelId)}` +
+      `&maxResults=${MAX_RESULTS}` +
+      `&order=date&type=video` +
+      `&key=${encodeURIComponent(API_KEY)}`;
 
-  if (!res.ok) {
-    const text = await res.text();
-    return new Response(JSON.stringify({ error: "YouTube API error", detail: text }), {
-      status: 502,
-      headers: { "Content-Type": "application/json" },
+    const res = await fetch(url);
+    if (!res.ok) {
+      const detail = await res.text();
+      return { channelId, error: "YouTube API error", detail };
+    }
+
+    const data = await res.json();
+
+    const items = (data.items ?? []).map((it: any) => {
+      const videoId = it.id?.videoId;
+      const sn = it.snippet ?? {};
+      const thumb =
+        sn.thumbnails?.high?.url ||
+        sn.thumbnails?.medium?.url ||
+        sn.thumbnails?.default?.url ||
+        "";
+
+      return {
+        id: videoId ?? "",
+        title: sn.title ?? "",
+        publishedAt: sn.publishedAt ?? "",
+        thumbnail: thumb,
+        url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : "",
+      };
     });
-  }
 
-  const data = await res.json();
+    return { channelId, items };
+  };
 
-  const items = (data.items ?? []).map((it: any) => {
-    const videoId = it.id?.videoId;
-    const sn = it.snippet ?? {};
-    const thumb =
-      sn.thumbnails?.high?.url ||
-      sn.thumbnails?.medium?.url ||
-      sn.thumbnails?.default?.url ||
-      "";
+  const results = await Promise.all(channelIds.map(fetchOne));
 
-    return {
-      id: videoId ?? "",
-      title: sn.title ?? "",
-      publishedAt: sn.publishedAt ?? "",
-      thumbnail: thumb,
-      url: videoId ? `https://www.youtube.com/watch?v=${videoId}` : "",
-    };
-  });
-
-  return new Response(JSON.stringify({ items }), {
+  return new Response(JSON.stringify({ results }), {
     status: 200,
     headers: {
       "Content-Type": "application/json",
