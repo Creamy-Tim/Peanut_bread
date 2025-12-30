@@ -49,7 +49,7 @@
     },
     {
         "id": "보라",
-        "img": "/assets/img/writer/judy.jpeg",
+        "img": "/assets/img/writer/bora.jpeg",
         "name": "보라",
         "role": "홍보팀장",
         "introduce": "땅콩빵 홍보팀장 보라입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다.",
@@ -70,5 +70,5 @@
         "instagram": "msg000i94",
         "instagramLink": "https://www.instagram.com/msg000i94/",
         "email": ""
-    }  
+    }
 ]

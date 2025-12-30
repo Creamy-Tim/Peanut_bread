@@ -269,6 +269,9 @@ header {
     border: 2px solid #af814d;
     border-radius: 10px;
     padding: 20px;
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal_close {
@@ -344,6 +347,11 @@ header {
 
 /* 모바일 */
 @media (max-width: 768px) {
+    .modal_panel{
+        top: 16px;                 /* 위에서 살짝 띄움 */
+        transform: translateX(-50%); /* Y축 -50% 제거 */
+    }
+
     .modal_body {
         grid-template-columns: 1fr;
     }
