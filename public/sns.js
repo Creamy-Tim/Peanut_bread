@@ -1,24 +1,32 @@
 fetch("/api/youtube.json")
   .then((res) => res.json())
   .then((data) => {
-    const track = document.querySelector(".video_section_track");
-    if (!track) return;
+    const tracks = document.querySelectorAll(".video_section_track[data-playlist]");
+    if (!tracks.length) return;
 
-    track.innerHTML = "";
+    // 트랙 초기화
+    tracks.forEach((t) => (t.innerHTML = ""));
 
-    (data.items || []).forEach((video) => {
-      const a = document.createElement("a");
-      a.href = video.url;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.className = "card";
+    const items = data.items || [];
 
-      a.innerHTML = `
-        <img src="${video.thumbnail}" alt="${video.title}">
-        <div class="card_title">${video.title}</div>
-      `;
+    // playlistId별로 해당 트랙에 렌더
+    tracks.forEach((track) => {
+      const pid = track.dataset.playlist; // data-playlist 값
+      const list = items.filter((v) => v.playlistId === pid);
 
-      track.appendChild(a);
+      list.forEach((video) => {
+        const a = document.createElement("a");
+        a.href = video.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.className = "video";
+
+        a.innerHTML = `
+          <img src="${video.thumbnail}" alt="${video.title}">
+        `;
+
+        track.appendChild(a);
+      });
     });
   })
   .catch((err) => console.error("Failed to load youtube.json", err));
