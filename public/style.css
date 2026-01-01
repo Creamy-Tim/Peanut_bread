@@ -383,35 +383,34 @@ header {
 
 /* ---------- SNS 페이지 ---------- */
 .video_section {
-  width: 100%;
-  height: 240px;              /* ✅ 케이스 높이 */
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 240px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* 가로로 늘어나는 트랙 */
 .video_section_track {
-  display: flex;
-  gap: 12px;
-  height: 100%;               /* ⭐ 매우 중요 */
-  width: max-content;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    width: max-content;
 }
 
 /* 개별 영상 카드 */
 .video {
-  height: 100%;               /* 부모 높이 240px */
-  width: 360px;               /* 카드 폭 (원하면 조절) */
-  flex: 0 0 auto;
-  display: block;
-  overflow: hidden;
-  border-radius: 6px;         /* 선택 */
+    height: 100%;
+    width: 360px;
+    flex: 0 0 auto;
+    display: block;
+    overflow: hidden;
 }
 
 /* 썸네일 */
 .video img {
-  height: 100%;               /* ✅ 핵심 */
-  width: 100%;
-  object-fit: cover;          /* 잘려도 꽉 채움 */
-  display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
 }

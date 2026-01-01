@@ -1,6 +1,6 @@
 [
     {
-        "id": "정승하",
+        "id": "1",
         "img": "/assets/img/writer/tmdgk.png",
         "name": "승하",
         "role": "대표",
@@ -12,7 +12,7 @@
         "email": "tmdgk050830@naver.com"
     },
     {
-        "id": "애리",
+        "id": "2",
         "img": "/assets/img/writer/aeri.png",
         "name": "애리",
         "role": "편집부장",
@@ -24,7 +24,7 @@
         "email": ""
     },
     {
-        "id": "지홍",
+        "id": "3",
         "img": "/assets/img/writer/judy.png",
         "name": "지홍",
         "role": "유통팀장",
@@ -36,7 +36,7 @@
         "email": ""
     },
     {
-        "id": "마리",
+        "id": "4",
         "img": "/assets/img/writer/marie.png",
         "name": "마리",
         "role": "디자인부장",
@@ -48,7 +48,7 @@
         "email": ""
     },
     {
-        "id": "보라",
+        "id": "5",
         "img": "/assets/img/writer/bora.png",
         "name": "보라",
         "role": "홍보팀장",
@@ -60,7 +60,7 @@
         "email": ""
     },
     {
-        "id": "아도",
+        "id": "6",
         "img": "/assets/img/writer/ado.png",
         "name": "아도",
         "role": "홍보팀장",
