@@ -152,3 +152,19 @@ document.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
 });
+
+
+
+
+// books.astro
+// 책 소개 패널
+
+const bookModal = document.getElementById("bookModal");
+const bookImg = document.getElementById("bookImg");
+const bookNameEl = document.getElementById("bookName");
+const bookWriterEl = document.getElementById("bookWriter");
+const bookPagesEl = document.getElementById("bookPages");
+const bookIntroduceEl = document.getElementById("bookIntroduce");
+const bookPriceEl = document.getElementById("bookPrice");
+const bookLinkEl = document.getElementById("bookLink");
+

@@ -26,6 +26,40 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
                 <span></span>
             </button>
         </div>
+        <!-- 웹용 헤더  -->
+        <nav class="header_nav" aria-label="주요 메뉴">
+            <a class={`nav_item ${active === "main" ? "is-active" : ""}`} href="/" aria-current={active === "main" ? "page" : undefined}>
+                <img src="/assets/img/icon/main.png" alt="" />
+                <span>메인</span>
+            </a>
+
+            <a class={`nav_item ${active === "about" ? "is-active" : ""}`} href="/about" aria-current={active === "about" ? "page" : undefined}>
+                <img src="/assets/img/icon/aboutus.png" alt="" />
+                <span>회사소개</span>
+            </a>
+
+            <a class={`nav_item ${active === "team" ? "is-active" : ""}`} href="/team" aria-current={active === "team" ? "page" : undefined}>
+                <img src="/assets/img/icon/ourteam.png" alt="" />
+                <span>팀원소개</span>
+            </a>
+
+            <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
+            
+            <a class={`nav_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>
+                <img src="/assets/img/icon/store.png" alt="" />
+                <span>스토어</span>
+            </a>
+
+            <a class={`nav_item ${active === "sns" ? "is-active" : ""}`} href="/sns" aria-current={active === "sns" ? "page" : undefined}>
+                <img src="/assets/img/icon/sns.png" alt="" />
+                <span>sns</span>
+            </a>
+
+            <a class={`nav_item ${active === "calander" ? "is-active" : ""}`} href="/calander" aria-current={active === "calander" ? "page" : undefined}>
+                <img src="/assets/img/icon/calander.png" alt="" />
+                <span>일정</span>
+            </a>
+        </nav>
     </header>
 
     <div class="container">
