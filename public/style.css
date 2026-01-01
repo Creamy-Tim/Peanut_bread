@@ -196,6 +196,7 @@ header {
 /* ---------- 본문 ---------- */
 .content {
     height: 100%;
+    position: relative;
     overflow-y: auto;
     padding: 48px;
     background: #fff;
@@ -204,6 +205,9 @@ header {
 
 /* 공용 페이지 제목 스타일 */
 .page_title {
+    grid-column: 1 / -1;   /* ✅ 1행 전체를 차지 */
+    margin: 0;
+
     color: #6b4f2d;
     /* font-size: 32px; */
     font-family: 'MemomentKkukkukk';

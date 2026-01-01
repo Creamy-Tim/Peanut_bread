@@ -4,9 +4,8 @@ import members from "../data/writers.json";
 ---
 
 <BaseLayout active="team">
-    <h1 class="page_title">팀원 소개</h1>
-
     <section class="team_grid" aria-label="팀원 목록">
+      <h1 class="page_title">팀원 소개</h1>
     {members.map((m) => (
       <button
         class="member"
