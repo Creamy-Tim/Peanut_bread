@@ -1,32 +1,42 @@
 [
     {
         "id": "1",
-        "img": "/assets/img/book/Hops_Is_In_The_Air.png",
+        "img": "/assets/img/book/hops-is-in-the-air.png",
         "name": "Hops Is In The Air",
         "writer": "승하",
-        "pages": "279",
+        "pages": "214",
         "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
         "price": "14,000",
         "link": "https://smartstore.naver.com/ddangcong0/products/10652642255"
     },
     {
         "id": "2",
-        "img": "/assets/img/book/심해 속에 빠져버렸다.png",
+        "img": "/assets/img/book/a-fall-in-the-deep-sea.png",
         "name": "심해 속에 빠져버렸다",
         "writer": "마리",
-        "pages": "279",
+        "pages": "117",
         "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
         "price": "10,000",
         "link": "https://smartstore.naver.com/ddangcong0/products/10242476880"
     },
     {
         "id": "3",
-        "img": "/assets/img/book/언젠가 나의 이야기가 될 수 있으니 조금 이기적이게 들어줄게요.png",
+        "img": "/assets/img/book/since-it-can-be-my-story.png",
         "name": "언젠가 나의 이야기가 될 수 있으니 조금 이기적이게 들어줄게요",
         "writer": "아도",
-        "pages": "279",
+        "pages": "42",
         "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
         "price": "8,000",
+        "link": "https://smartstore.naver.com/ddangcong0/products/10242455168"
+    },
+    {
+        "id": "4",
+        "img": "/assets/img/book/vegan-with-store.png",
+        "name": "비건 with 매점",
+        "writer": "애리",
+        "pages": "85",
+        "introduce": "땅콩빵 대표 승하입니다. 땅콩빵은 제가 좋아하는 것들을 많은 사람들과 나누고 싶어서 시작하게 된 브랜드입니다. 저희의 작은 노력이 여러분의 일상에 작은 기쁨이 되길 바랍니다. 모쪼록 감사하고 3줄 채웠습니다.",
+        "price": "10,000",
         "link": "https://smartstore.naver.com/ddangcong0/products/10242455168"
     }
 ]
