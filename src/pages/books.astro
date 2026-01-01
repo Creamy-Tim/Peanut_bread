@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import members from "../data/books.json";
+---
+
+<BaseLayout active="team">
+    <h1 class="page_title">책</h1>
+
+    <section class="team_grid" aria-label="책 목록">
+    {members.map((m) => (
+      <button
+        class="member"
+        type="button"
+        data-img={m.img}
+        data-name={m.name}
+        data-writer={m.writer}
+        data-pages={m.pages}
+        data-introduce={m.introduce}
+        data-price={m.price}
+        data-link={m.link}
+      >
+        <img class="member_img" src={m.img} alt={m.name} loading="lazy" />
+        <p class="member_role">{m.writer}</p>
+        <p class="member_name">{m.name}</p>
+      </button>
+    ))}
+  </section>
+
+    <!-- 작가 상세 소개 패널  -->
+    <div class="modal" id="memberModal" aria-hidden="true">
+        <div class="modal_overlay" data-close="true"></div>
+
+        <div class="modal_panel" role="dialog" aria-modal="true" aria-label="팀원 정보">
+            <button class="modal_close" type="button" aria-label="닫기" data-close="true">×</button>
+
+            <div class="modal_body">
+                <img class="modal_img" id="modalImg" alt="" />
+
+                <div class="modal_text">
+                    <div class="modal_header">
+                        <h2 class="modal_name" id="modalName"></h2>
+                        <span class="modal_role" id="modalRole"></span>
+                    </div>
+                    <div class="modal_info">
+                        <p class="modal_introduce" id="modalIntroduce"></p>
+                        <a class="modal_showpiece" id="modalShowpiece" rel="noopener noreferrer"></a> <!-- 보안처리  -->
+                        <a class="modal_instagram" id="modalInstagram" rel="noopener noreferrer"></a>
+                        <p class="modal_email" id="modalEmail"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="apply_wrap">
+        <a href="/apply" class="team_apply">지원하기</a>
+    </div>
+</BaseLayout>
