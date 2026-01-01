@@ -44,7 +44,7 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
             </a>
 
             <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
-            
+
             <a class={`nav_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>
                 <img src="/assets/img/icon/store.png" alt="" />
                 <span>스토어</span>
@@ -55,8 +55,8 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
                 <span>sns</span>
             </a>
 
-            <a class={`nav_item ${active === "calander" ? "is-active" : ""}`} href="/calander" aria-current={active === "calander" ? "page" : undefined}>
-                <img src="/assets/img/icon/calander.png" alt="" />
+            <a class={`nav_item ${active === "calendar" ? "is-active" : ""}`} href="/calendar" aria-current={active === "calendar" ? "page" : undefined}>
+                <img src="/assets/img/icon/calendar.png" alt="" />
                 <span>일정</span>
             </a>
         </nav>
