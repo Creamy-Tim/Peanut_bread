@@ -4,9 +4,8 @@ import books from "../data/books.json";
 ---
 
 <BaseLayout active="team">
-    <h1 class="page_title">책</h1>
-
     <section class="team_grid" aria-label="책 목록">
+        <h1 class="page_title">책</h1>
         {books.map((m) => (
         <button
             class="book"
