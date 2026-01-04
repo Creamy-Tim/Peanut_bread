@@ -8,7 +8,7 @@
 }
 
 :root {
-    --header-h: 72px;
+    --header-h: 84px;
     --sidebar-w: 260px;
     --line: #af814d;
 }
@@ -30,12 +30,16 @@ html, body {
 /* ---------- 헤더 ---------- */
 header {
     width: 100%;
-    height: var(--header-h);
-    background-color: #af814d;
+    height: auto;
+    background-color: #ffffff;
+    border-bottom: #af814d 4px solid;
     position: sticky;
     top: 0; /* sticky에 필요 */
     z-index: 100;
+    padding: 16px 0;
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -44,11 +48,10 @@ header {
     display: none;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-
-    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     padding: 0 16px;
+    box-sizing: border-box;
 }
 
 .header_home {
@@ -56,10 +59,11 @@ header {
     height: 40px;
 }
 
-.header_logo {
+.header_logo, .header_logo_web {
     width: auto;
     height: 48px;
     justify-self: center;
+    margin: 0 auto;
 }
 
 .header_btn {
@@ -68,7 +72,7 @@ header {
     height: 32px;
     background: none;
     border: none;
-    padding: 4px; /* 터치 영역 확정 */
+    padding: 4px; /* 터치 영역 확장 */
     cursor: pointer;
 
     flex-direction: column;
@@ -78,21 +82,20 @@ header {
 .header_btn span {
     width: 100%;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #af814d;
     border-radius: 2px;
 }
 
 .header_nav {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7개 균등 */
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
 
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-
-    overflow: hidden; /* 스크롤 절대 안 생김 */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .nav_item {
@@ -159,6 +162,10 @@ header {
         height: 40px;
     }
 
+    .header_logo_web {
+        display: none;
+    }
+
     .header_nav {
         display: none;
     }
@@ -192,6 +199,18 @@ header {
     /* ----- 메인 ----- */
 }
 
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: #af814d;
+    position: sticky;
+    bottom: 0; /* sticky에 필요 */
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* ---------- 본문 ---------- */
 .content {
@@ -215,6 +234,46 @@ header {
     font-weight: 700;
     text-decoration: none;
 }
+
+
+
+/* ---------- 메인 페이지 ---------- */
+.main_link_section {
+    width: 100%;
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.main_link_sns, .main_link_sns img, .main_ddoco_img {
+    width: 40px;
+    height: 40px;
+}
+
+.main_gallery_section {
+    width: 100%;
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+    display: flex;
+}
+
+.main_schedule_section {
+    width: 100%;
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+    display: flex;
+}
+
+.main_video_section {
+    width: 100%;
+    height: 496px;
+    display: flex;
+}
+
+/* ---------- 메인 페이지 ---------- */
+
 
 
 /* ---------- 팀 소개 페이지 ---------- */
@@ -485,14 +544,11 @@ header {
     margin: 0;
     color: #6b4f2d;
 
-    line-height: 1.4em;
-
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-
-    min-height: calc(1.4em * 2);
+    height: calc(1.4em * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .book_writer {

@@ -15,7 +15,7 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
     <header>
         <div class="header_inner">
             <a href="/" aria-label="메인 페이지로 이동" aria-current={active === "main" ? "page" : undefined}>
-                <img src="/assets/img/icon/home.svg"class="header_home" alt="홈" />
+                <img src="/assets/img/icon/main.png" class="header_home" alt="홈" />
             </a>
 
             <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
@@ -27,6 +27,9 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
             </button>
         </div>
         <!-- 웹용 헤더  -->
+        <!-- 로고  -->
+        <img src="/assets/img/icon/title_logo.png" class="header_logo_web" alt="땅콩빵 독립출판사" />
+
         <nav class="header_nav" aria-label="주요 메뉴">
             <a class={`nav_item ${active === "main" ? "is-active" : ""}`} href="/" aria-current={active === "main" ? "page" : undefined}>
                 <img src="/assets/img/icon/main.png" alt="" />
@@ -42,8 +45,6 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
                 <img src="/assets/img/icon/ourteam.png" alt="" />
                 <span>팀원소개</span>
             </a>
-
-            <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
 
             <a class={`nav_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>
                 <img src="/assets/img/icon/store.png" alt="" />
@@ -79,6 +80,10 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
             <slot />
         </main>
     </div>
+
+    <footer>
+        <p class="footer_test">C 땅콩빵 All right reserved</p>
+    </footer>
 
     <!-- 햄버거 사이드바 토글 -->
     <script type="module" src="/app.js"></script>
