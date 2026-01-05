@@ -12,58 +12,59 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
     <link href="/assets/img/icon/ddoco_head.png" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="header_inner">
-            <a href="/" aria-label="메인 페이지로 이동" aria-current={active === "main" ? "page" : undefined}>
-                <img src="/assets/img/icon/main.png" class="header_home" alt="홈" />
-            </a>
+    <div class="layout">
+        <header>
+            <div class="header_inner">
+                <a href="/" aria-label="메인 페이지로 이동" aria-current={active === "main" ? "page" : undefined}>
+                    <img src="/assets/img/icon/main.png" class="header_home" alt="홈" />
+                </a>
 
-            <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
+                <img src="/assets/img/icon/title_logo.png" class="header_logo" alt="땅콩빵 독립출판사" />
 
-            <button class="header_btn" aria-label="메뉴 열기"> <!-- 웹에 의미 전달 -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <!-- 웹용 헤더  -->
-        <!-- 로고  -->
-        <img src="/assets/img/icon/title_logo.png" class="header_logo_web" alt="땅콩빵 독립출판사" />
+                <button class="header_btn" aria-label="메뉴 열기"> <!-- 웹에 의미 전달 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- 웹용 헤더  -->
+            <!-- 로고  -->
+            <img src="/assets/img/icon/title_logo.png" class="header_logo_web" alt="땅콩빵 독립출판사" />
 
-        <nav class="header_nav" aria-label="주요 메뉴">
-            <a class={`nav_item ${active === "main" ? "is-active" : ""}`} href="/" aria-current={active === "main" ? "page" : undefined}>
-                <img src="/assets/img/icon/main.png" alt="" />
-                <span>메인</span>
-            </a>
+            <nav class="header_nav" aria-label="주요 메뉴">
+                <a class={`nav_item ${active === "main" ? "is-active" : ""}`} href="/" aria-current={active === "main" ? "page" : undefined}>
+                    <img src="/assets/img/icon/main.png" alt="" />
+                    <span>메인</span>
+                </a>
 
-            <a class={`nav_item ${active === "about" ? "is-active" : ""}`} href="/about" aria-current={active === "about" ? "page" : undefined}>
-                <img src="/assets/img/icon/aboutus.png" alt="" />
-                <span>회사소개</span>
-            </a>
+                <a class={`nav_item ${active === "about" ? "is-active" : ""}`} href="/about" aria-current={active === "about" ? "page" : undefined}>
+                    <img src="/assets/img/icon/aboutus.png" alt="" />
+                    <span>회사소개</span>
+                </a>
 
-            <a class={`nav_item ${active === "team" ? "is-active" : ""}`} href="/team" aria-current={active === "team" ? "page" : undefined}>
-                <img src="/assets/img/icon/ourteam.png" alt="" />
-                <span>팀원소개</span>
-            </a>
+                <a class={`nav_item ${active === "team" ? "is-active" : ""}`} href="/team" aria-current={active === "team" ? "page" : undefined}>
+                    <img src="/assets/img/icon/ourteam.png" alt="" />
+                    <span>팀원소개</span>
+                </a>
 
-            <a class={`nav_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>
-                <img src="/assets/img/icon/store.png" alt="" />
-                <span>스토어</span>
-            </a>
+                <a class={`nav_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>
+                    <img src="/assets/img/icon/store.png" alt="" />
+                    <span>스토어</span>
+                </a>
 
-            <a class={`nav_item ${active === "sns" ? "is-active" : ""}`} href="/sns" aria-current={active === "sns" ? "page" : undefined}>
-                <img src="/assets/img/icon/sns.png" alt="" />
-                <span>sns</span>
-            </a>
+                <a class={`nav_item ${active === "sns" ? "is-active" : ""}`} href="/sns" aria-current={active === "sns" ? "page" : undefined}>
+                    <img src="/assets/img/icon/sns.png" alt="" />
+                    <span>sns</span>
+                </a>
 
-            <a class={`nav_item ${active === "calendar" ? "is-active" : ""}`} href="/calendar" aria-current={active === "calendar" ? "page" : undefined}>
-                <img src="/assets/img/icon/calendar.png" alt="" />
-                <span>일정</span>
-            </a>
-        </nav>
-    </header>
+                <a class={`nav_item ${active === "calendar" ? "is-active" : ""}`} href="/calendar" aria-current={active === "calendar" ? "page" : undefined}>
+                    <img src="/assets/img/icon/calendar.png" alt="" />
+                    <span>일정</span>
+                </a>
+            </nav>
+        </header>
 
-    <div class="container">
+        
         <aside class="sidebar" aria-label="사이드 메뉴">
             <nav class="sidebar_nav" aria-label="메뉴">
                 <a class={`side_item ${active === "main" ? "is-active" : ""}`} href="/" aria-current={active === "main" ? "page" : undefined}>MAIN</a>
@@ -75,15 +76,20 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
                 <a class={`side_item ${active === "sns" ? "is-active" : ""}`} href="/sns" aria-current={active === "sns" ? "page" : undefined}>SNS</a>
                 <a class={`side_item ${active === "calendar" ? "is-active" : ""}`} href="/calendar" aria-current={active === "calendar" ? "page" : undefined}>CALENDAR</a>
             </nav>
-      </aside>
+        </aside>
+
         <main class="content" id="content">
             <slot />
         </main>
-    </div>
 
-    <footer>
-        <p class="footer_test">C 땅콩빵 All right reserved</p>
-    </footer>
+        <footer>
+            <p class="footer_test">C 땅콩빵 All right reserved</p>
+        </footer>
+    </div>
+    
+    
+
+    
 
     <!-- 햄버거 사이드바 토글 -->
     <script type="module" src="/app.js"></script>
