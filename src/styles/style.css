@@ -1,0 +1,61 @@
+/* 폰트 등록 */
+
+:root {
+    --header-h: 84px;
+    --sidebar-w: 260px;
+    --line: #af814d;
+}
+
+a {
+    color: inherit;          /* 부모 글자색 사용 */
+    text-decoration: none;   /* 밑줄 제거 */
+    cursor: pointer;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.layout{
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* 공용 페이지 제목 스타일 */
+.page_title {
+    grid-column: 1 / -1;   /* ✅ 1행 전체를 차지 */
+    margin: 0;
+
+    color: #6b4f2d;
+    /* font-size: 32px; */
+    font-family: 'MemomentKkukkukk';
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

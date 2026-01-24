@@ -1,0 +1,58 @@
+.team_grid {
+    display: grid;
+    gap: 24px;
+    margin: 0 auto;
+
+    /* 카드 최소 200~240px 정도 확보, 남는 공간은 자동 분배 */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-items: start;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.book {
+    all: unset;  /* 버튼 기본 스타일 제거 */
+    display: grid;
+    gap: 10px;
+    cursor: pointer;
+    justify-self: center;
+    text-align: center;
+}
+
+.member {
+    all: unset;  /* 버튼 기본 스타일 제거 */
+    display: grid;
+    gap: 10px;
+    cursor: pointer;
+    justify-self: center;
+    text-align: center;
+}
+
+.book_img {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* 꽉 채우되 비율 유지 */
+    border: 2px solid #af814d;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.book_name {
+    width: 100%;
+    max-width: 240px;
+    margin: 0;
+    color: #6b4f2d;
+
+    height: calc(1.4em * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.book_writer {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0;
+}

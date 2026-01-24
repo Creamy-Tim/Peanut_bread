@@ -1,0 +1,32 @@
+.video_section {
+    width: 100%;
+    height: 240px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 가로로 늘어나는 트랙 */
+.video_section_track {
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    width: max-content;
+}
+
+/* 개별 영상 카드 */
+.video {
+    height: 100%;
+    width: 360px;
+    flex: 0 0 auto;
+    display: block;
+    overflow: hidden;
+}
+
+/* 썸네일 */
+.video img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}

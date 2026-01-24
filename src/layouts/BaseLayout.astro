@@ -1,4 +1,6 @@
 ---
+import "../styles/style.css";
+import "../styles/template.css";
 const { title = "땅콩빵", active = "main" } = Astro.props;
 ---
 
@@ -8,7 +10,7 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/font.css" />
     <link href="/assets/img/icon/ddoco_head.png" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
@@ -72,8 +74,6 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
                 <a class={`side_item ${active === "team" ? "is-active" : ""}`} href="/team" aria-current={active === "team" ? "page" : undefined}>OUR TEAM</a>
                 <a class={`side_item ${active === "store" ? "is-active" : ""}`} href="/store" aria-current={active === "store" ? "page" : undefined}>STORE</a>
                 <a class={`side_item ${active === "books" ? "is-active" : ""}`} href="/books" aria-current={active === "books" ? "page" : undefined}>BOOKS</a>
-                <a class={`side_item ${active === "goods" ? "is-active" : ""}`} href="/goods" aria-current={active === "goods" ? "page" : undefined}>GOODS</a>
-                <a class={`side_item ${active === "sns" ? "is-active" : ""}`} href="/sns" aria-current={active === "sns" ? "page" : undefined}>SNS</a>
                 <a class={`side_item ${active === "calendar" ? "is-active" : ""}`} href="/calendar" aria-current={active === "calendar" ? "page" : undefined}>CALENDAR</a>
             </nav>
         </aside>
@@ -86,10 +86,6 @@ const { title = "땅콩빵", active = "main" } = Astro.props;
             <p class="footer_test">C 땅콩빵 All right reserved</p>
         </footer>
     </div>
-    
-    
-
-    
 
     <!-- 햄버거 사이드바 토글 -->
     <script type="module" src="/app.js"></script>
