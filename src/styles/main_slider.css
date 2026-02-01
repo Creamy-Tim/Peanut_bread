@@ -1,0 +1,66 @@
+.gallery_section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+}
+
+.slider_track {
+    position: relative;
+    width: 100%;
+}
+
+.slider_slide {
+    display: none;
+    width: 100%;
+}
+
+.slider_slide.is-active {
+    display: block;
+}
+
+.slider_slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 🔵 버튼 (좌/우) */
+.slider_prev, .slider_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff88;
+    border: none;
+    font-size: 32px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+.slider_prev { left: 10px; }
+.slider_next { right: 10px; }
+
+/* 🔵 도트 영역 */
+.slider_dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.slider_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+}
+
+.slider_dot.is-active {
+    background: #af814d;
+}

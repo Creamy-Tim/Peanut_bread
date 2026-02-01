@@ -1,0 +1,63 @@
+.link_section {
+    width: 100%;
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.main_link_sns, .main_link_sns img, .main_ddoco_img {
+    width: 40px;
+    height: 40px;
+}
+
+/* .main_gallery_section {
+    width: 100%;
+    height: 496px;
+    border-bottom: #af814d 2px solid;
+    display: flex;
+} */
+
+.schedule_section {
+    width: 100%;
+    height: 320px;
+    border-bottom: #af814d 2px solid;
+    display: flex;
+}
+
+.notice_section, .diary_section {
+    flex: 1;
+    height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.notice_section {
+    border-right: #af814d 2px solid;
+}
+
+.subtitle {
+    margin: 0;
+    color: #6b4f2d;
+    font-size: 28px;
+    font-family: 'MemomentKkukkukk';
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.date {
+    color: #6b4f2d;
+    font-size: 20px;
+    font-family: 'MemomentKkukkukk';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.video_section {
+    width: 100%;
+    height: 496px;
+    display: flex;
+}

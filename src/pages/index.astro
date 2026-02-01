@@ -1,9 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/main.css";
+import "../styles/main_slider.css";
+
+// ../assets/main_slide 폴더 안의 이미지들을 전부 url 문자열로 가져오기
+const imageModules = import.meta.glob<string>(
+  "../assets/main_slide/*.{jpg,jpeg,png,webp}",
+  {
+    eager: true,
+    as: "url",
+  }
+);
+
+const slides = Object.values(imageModules);
 ---
 
 <BaseLayout active="main">
-    <section class="main_link_section">
+    <section class="link_section">
         <a href="/sns" class="main_link_sns">
             <img src="/assets/img/icon/ddoco_head.png" alt="땅콩빵 영상" />
         </a>
@@ -12,13 +25,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <img src="/assets/img/icon/ddoco_head.png" alt="땅콩빵 영상" />
         </a>
     </section>
-    <section class="main_gallery_section">
+    
+    <section class="gallery_section">
+        <div class="slider_track">
+            {slides.map((src, i) => (
+            <div class={`slider_slide ${i === 0 ? "is-active" : ""}`}>
+                <img src={src} alt={`slide-${i}`} />
+            </div>
+            ))}
+        </div>
+
+        <div class="slider_dots">
+            {slides.map((_, i) => (
+            <button class={`slider_dot ${i === 0 ? "is-active" : ""}`} data-index={i}></button>
+            ))}
+        </div>
+
+        <button class="slider_prev">‹</button>
+        <button class="slider_next">›</button>
+    </section>
+
+
+
+    <section class="schedule_section">
+        <section class="notice_section">
+            <p class="subtitle">땅콩빵 알림장</p>
+            <p id="date" class="date"></p>
+        </section>
+
+        <section class="diary_section">
+            <p class="subtitle">땅콩빵 일기장...!</p>
+        </section>
 
     </section>
-    <section class="main_schedule_section">
+    <section class="video_section">
 
     </section>
-    <section class="main_video_section">
 
-    </section>
+    
+    
+    <!-- 슬라이더 JS  -->
+    <script type="module" src="/main_slider.js"></script>
+    <script src="/main_date.js" defer></script>
 </BaseLayout>
