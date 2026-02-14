@@ -1,15 +1,29 @@
 .link_section {
     width: 100%;
-    height: 496px;
+    height: auto;
     border-bottom: #af814d 2px solid;
     padding: 16px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.main_link_sns, .main_link_sns img, .main_ddoco_img {
-    width: 40px;
-    height: 40px;
+.main_link_sns, .main_link_sns img {
+    width: 25%;
+    height: auto;
+    margin: 8px 0 0 24px;
+}
+
+.main_ddoco_img {
+    width: 50%;
+    height: auto;
+    transform: translateY(-6%);
+    z-index: 10;
+}
+
+ .main_link_store, .main_link_store img {
+    width: 25%;
+    height: auto;
+    margin: 8px 24px 0 0;
 }
 
 /* .main_gallery_section {
