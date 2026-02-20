@@ -70,5 +70,29 @@
         "instagram": "msg000i94",
         "instagramLink": "https://www.instagram.com/msg000i94/",
         "email": ""
+    },
+    {
+        "id": "7",
+        "img": "/assets/img/writer/tmdgk.png",
+        "name": "구인중",
+        "role": "",
+        "introduce": "",
+        "showpiece": "",
+        "showpieceLink": "",
+        "instagram": "",
+        "instagramLink": "",
+        "email": ""
+    },
+    {
+        "id": "8",
+        "img": "/assets/img/writer/tmdgk.png",
+        "name": "구인중",
+        "role": "",
+        "introduce": "",
+        "showpiece": "",
+        "showpieceLink": "",
+        "instagram": "",
+        "instagramLink": "",
+        "email": ""
     }
 ]

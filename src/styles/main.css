@@ -5,24 +5,28 @@
     padding: 16px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+
+    /* 삐져나오기 허용 */
+    position: relative;
+    overflow: visible;
 }
 
 .main_link_sns, .main_link_sns img {
-    width: 25%;
-    height: auto;
+    width: 80%;
+    max-height: 200px;
     margin: 8px 0 0 24px;
 }
 
 .main_ddoco_img {
-    width: 50%;
+    width: 60%;
     height: auto;
-    transform: translateY(-6%);
+    transform: translateY(24%);
     z-index: 10;
 }
 
  .main_link_store, .main_link_store img {
-    width: 25%;
-    height: auto;
+    width: 80%;
+    max-height: 200px;
     margin: 8px 24px 0 0;
 }
 
