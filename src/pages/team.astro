@@ -6,27 +6,26 @@ import members from "../data/writers.json";
 
 <BaseLayout active="team">
     <section class="team_grid" aria-label="팀원 목록">
-      <h1 class="page_title">팀원 소개</h1>
-    {members.map((m) => (
-      <button
-        class="member"
-        type="button"
-        data-img={m.img}
-        data-name={m.name}
-        data-role={m.role}
-        data-introduce={m.introduce}
-        data-showpiece={m.showpiece}
-        data-showpiece-link={m.showpieceLink}
-        data-instagram={m.instagram}
-        data-instagram-link={m.instagramLink}
-        data-email={m.email}
-      >
-        <img class="member_img" src={m.img} alt={m.name} loading="lazy" />
-        <p class="member_role">{m.role}</p>
-        <p class="member_name">{m.name}</p>
-      </button>
-    ))}
-  </section>
+        {members.map((m) => (
+        <button
+            class="member"
+            type="button"
+            data-img={m.img}
+            data-name={m.name}
+            data-role={m.role}
+            data-introduce={m.introduce}
+            data-showpiece={m.showpiece}
+            data-showpiece-link={m.showpieceLink}
+            data-instagram={m.instagram}
+            data-instagram-link={m.instagramLink}
+            data-email={m.email}
+        >
+            <img class="member_img" src={m.img} alt={m.name} loading="lazy" />
+            <p class="member_role">{m.role}</p>
+            <p class="member_name">{m.name}</p>
+        </button>
+        ))}
+    </section>
 
     <!-- 작가 상세 소개 패널  -->
     <div class="modal" id="memberModal" aria-hidden="true">
@@ -54,7 +53,7 @@ import members from "../data/writers.json";
         </div>
     </div>
 
-    <div class="apply_wrap">
-        <a href="/apply" class="team_apply">지원하기</a>
-    </div>
+    <section class="apply_section">
+        <a href="/apply" class="team_apply" aria-label="지원하기"></a>
+    </section>
 </BaseLayout>

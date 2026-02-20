@@ -26,13 +26,13 @@ header {
 }
 
 .header_home {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
 }
 
 .header_logo, .header_logo_web {
     width: auto;
-    height: 48px;
+    height: 64px;
     justify-self: center;
     margin: 0 auto;
 }
@@ -76,8 +76,8 @@ header {
 }
 
 .nav_item img {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
 }
 /* ---------- 헤더 ---------- */
 

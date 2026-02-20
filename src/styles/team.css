@@ -2,7 +2,8 @@
 .team_grid {
     display: grid;
     gap: 24px;
-    margin: 0 auto;
+    margin: 0 auto 64px;
+    padding: 64px 16px 12px;
 
     /* 카드 최소 200~240px 정도 확보, 남는 공간은 자동 분배 */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -84,6 +85,9 @@
     max-height: calc(100vh - 32px);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    /* 나중에 이미지 받으면 위에 디자인 지우고 이걸로 추가
+    background: url('/assets/img/icon/header_logo.png') center / contain no-repeat;
+    */
 }
 
 .modal_close {
@@ -171,19 +175,18 @@
     .modal_name { font-size: 34px; }
 }
 
-.apply_wrap {
-    margin: 0 auto;
-    text-align: center;
+.apply_section {
+    width: 100%;
+    height: auto;
 }
 
 .team_apply {
-    color: #6b4f2d;
-    font-size: 32px;
-    font-family: 'MemomentKkukkukk';
-    font-style: normal;
-    font-weight: 900;
-    text-decoration: none;
-    display: inline-block;
-    margin: 36px auto 140px;
-    text-decoration: underline;
+    display: block;
+    width: 100%;
+
+    /* 배너 “높이”를 안정적으로 만드는 핵심 2가지 중 택1 */
+    aspect-ratio: 1200 / 320;   /* ✅ 배너 원본 비율로 설정 (추천) */
+
+    background: url('/assets/img/banner/test_banner.png') center / cover no-repeat;
+    background-size: cover;
 }
