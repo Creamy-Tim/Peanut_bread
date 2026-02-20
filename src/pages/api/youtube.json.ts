@@ -3,7 +3,7 @@ import type { APIRoute } from "astro";
 // https://vercel.com/creamy-tims-projects/ddang_cong0
 // 이 링크에서 API 키값 관리
 // (링크는 배포 관련 사이트)
-const API_KEY = import.meta.env.ado as string | undefined;
+const API_KEY = import.meta.env.YOUTUBE_API_KEY as string | undefined;
 
 // ✅ 특정 재생목록 ID (예: "PLxxxx...")
 // 여러 재생목록을 쓰고 싶으면 "A,B,C" 형태로 넣을 수 있게 만들어둠.
