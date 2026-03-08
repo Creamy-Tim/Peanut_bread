@@ -64,7 +64,9 @@
     overflow-x: hidden;
 }
 
-.modal.open { display: block; }
+.modal.open {
+    display: block;
+}
 
 .modal_overlay {
     position: absolute;
@@ -78,16 +80,13 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: min(900px, calc(100% - 32px));
-    background: #fff;
-    border: 2px solid #af814d;
-    border-radius: 10px;
-    padding: 20px;
     max-height: calc(100vh - 32px);
+    aspect-ratio: 1600 / 1067;
+    padding: 20px;
+    padding-top: 8%;
+    box-sizing: border-box;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    /* 나중에 이미지 받으면 위에 디자인 지우고 이걸로 추가
-    background: url('/assets/img/icon/header_logo.png') center / contain no-repeat;
-    */
+    background: url('/assets/img/icon/panel_background.png') center / contain no-repeat;
 }
 
 .modal_close {
@@ -183,10 +182,10 @@
 .team_apply {
     display: block;
     width: 100%;
+}
 
-    /* 배너 “높이”를 안정적으로 만드는 핵심 2가지 중 택1 */
-    aspect-ratio: 1200 / 320;   /* ✅ 배너 원본 비율로 설정 (추천) */
-
-    background: url('/assets/img/banner/test_banner.png') center / cover no-repeat;
-    background-size: cover;
+.team_apply img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
