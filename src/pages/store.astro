@@ -1,13 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/store.css";
-import "../styles/team.css";
 import books from "../data/books.json";
 ---
 
 <BaseLayout active="store">
     <section class="team_grid" aria-label="책 목록">
-        <h1 class="page_title">책</h1>
         {books.map((m) => (
         <button
             class="book"

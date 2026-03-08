@@ -1,7 +1,109 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/calendar.css";
 ---
 
 <BaseLayout active="calendar">
-    <h1 class="page_title">일정</h1>
+
+  <section class="calendar">
+    
+    <div class="calendar-header">
+      <button id="prev">◀</button>
+      <h2 id="monthTitle"></h2>
+      <button id="next">▶</button>
+    </div>
+
+    <div class="calendar-grid" id="calendarGrid"></div>
+
+  </section>
+
+  <script>
+    const events = {
+        "2026-03-05": { title: "회의", img: "/assets/img/icon/star.png", link: "/apply" },
+        "2026-03-10": { title: "발표", img: "/assets/img/icon/pin.png",  link: "/calendar/2026-03-10" },
+    };
+
+
+
+    let currentDate = new Date()
+
+    const monthTitle = document.getElementById("monthTitle")
+    const grid = document.getElementById("calendarGrid")
+
+    function renderCalendar() {
+
+      grid.innerHTML = ""
+
+      const year = currentDate.getFullYear()
+      const month = currentDate.getMonth()
+
+      monthTitle.textContent = `${year}년 ${month+1}월`
+
+      const firstDay = new Date(year, month, 1).getDay()
+      const lastDate = new Date(year, month+1, 0).getDate()
+
+      const weekdays = ["일","월","화","수","목","금","토"]
+
+      weekdays.forEach(d=>{
+        const div = document.createElement("div")
+        div.className="calendar-weekday"
+        div.textContent=d
+        grid.appendChild(div)
+      })
+
+      for(let i=0;i<firstDay;i++){
+        const empty = document.createElement("div")
+        empty.className="calendar-day"
+        grid.appendChild(empty)
+      }
+
+      for (let day = 1; day <= lastDate; day++) {
+  const div = document.createElement("div")
+  div.className = "calendar-day"
+
+  const dateKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`
+
+  // 날짜 숫자
+  const num = document.createElement("div")
+  num.className = "day-num"
+  num.textContent = day
+  div.appendChild(num)
+
+  // 이벤트가 있으면 내용 추가
+  const ev = events[dateKey]
+  if (ev) {
+    const badge = document.createElement("div")
+    badge.className = "day-event"
+    badge.innerHTML = `
+      ${ev.img ? `<img class="day-icon" src="${ev.img}" alt="" />` : ""}
+      <span class="day-text">${ev.title}</span>
+    `
+    div.appendChild(badge)
+
+    // 클릭 이벤트
+    div.style.cursor = "pointer"
+    div.addEventListener("click", () => {
+      if (ev.link) window.location.href = ev.link
+      else alert(`${dateKey}: ${ev.title}`)
+    })
+  }
+
+  grid.appendChild(div)
+}
+    }
+
+    document.getElementById("prev").onclick=()=>{
+      currentDate.setMonth(currentDate.getMonth()-1)
+      renderCalendar()
+    }
+
+    document.getElementById("next").onclick=()=>{
+      currentDate.setMonth(currentDate.getMonth()+1)
+      renderCalendar()
+    }
+
+    renderCalendar()
+
+  </script>
+
 </BaseLayout>

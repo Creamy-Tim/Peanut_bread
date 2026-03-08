@@ -1,7 +1,8 @@
 .team_grid {
     display: grid;
     gap: 24px;
-    margin: 0 auto;
+    margin: 0 auto 64px;
+    padding: 64px 16px 12px;
 
     /* 카드 최소 200~240px 정도 확보, 남는 공간은 자동 분배 */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -55,4 +56,39 @@
     font-weight: 900;
     font-size: 20px;
     margin: 0;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+
+.modal_panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(900px, calc(100% - 32px));
+    background: #fff;
+    border: 2px solid #af814d;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    background: url('/assets/img/icon/panel_background.png') center / contain no-repeat;
+
 }
